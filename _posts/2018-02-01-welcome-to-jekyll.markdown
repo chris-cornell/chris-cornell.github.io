@@ -2,7 +2,7 @@
 layout: post
 title:  "First Post Placeholder"
 date:   2018-02-01 12:41:43 -0500
-categories: blog
+categories: jekyll update
 ---
 A test post to stay here until I figure out what I want to post about first.
 
