@@ -18,11 +18,7 @@ source "https://rubygems.org"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 gem "github-pages", group: :jekyll_plugins
 
-gem "clean-jekyll-theme"
-
-group :jekyll_plugins do
-    gem "jekyll-seo-tag", "~> 2.2"
-end
+gem "minimal-mistakes-jekyll"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do

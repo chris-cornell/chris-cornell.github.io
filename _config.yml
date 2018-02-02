@@ -24,7 +24,7 @@ github_username:  chris-cornell
 
 # Build settings
 markdown: kramdown
-theme: clean-jekyll-theme
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 
