@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "Blog Beginnings"
-date:   2018-02-01 12:41:43 -0500
+title:  "Jekyll Installation and Google-Fu"
+date:   2018-02-03 18:18:00 -0500
 categories: jekyll
 ---
 A couple months back, halfway into my first semester at Temple, I found myself in doubt. The first Computer Science class I registered for was CIS 1166 - "Mathematical Concepts in Computing I" - a Discrete Math course. Every section of CIS 1001, the intended introductory CS course, was full by my orientation date, and I had tested out of the first programming class, CIS 1068. This landed me in a classroom full of thick-bearded upperclassmen on my first day of college.
