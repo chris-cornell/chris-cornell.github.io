@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "First Post Placeholder"
+title:  "A post!"
 date:   2018-02-01 12:41:43 -0500
 categories: blog
 ---
