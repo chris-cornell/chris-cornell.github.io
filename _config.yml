@@ -17,10 +17,7 @@
 ##email: chriscornell@temple.edu
 ##description: >- # this means to ignore newlines until "baseurl:"
 ##  Powered by Jekyll and Github Pages
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://chris.hachihut.net" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  chris-cornell
-repository: chris-cornell/chris-cornell.github.io
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes"
@@ -34,17 +31,17 @@ plugins:
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Chris Cornell"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "Chris Cornell"
 description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://chris.hachihut.net"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "chris-cornell/chris-cornell.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -117,7 +114,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "An aspiring software developer"
   location         : "Philadelphia, PA"
-  email            :
+  email            : "chriscornell@temple.edu"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -136,7 +133,7 @@ author:
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
+  steam            : "smitson" # (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
   twitter          :
   vine             :
