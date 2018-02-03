@@ -2,8 +2,10 @@
 main:
   - title: "blog"
     url: "http://chris.hachihut.net/blog/"
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "about"
+    url: "/about/"
+  - title: "resume"
+    url: "/assets/resume.pdf"
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
