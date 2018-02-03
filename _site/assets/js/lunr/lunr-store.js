@@ -1,6 +1,6 @@
 var store = [{
-        "title": "A post!",
-        "excerpt":"A test post to stay here until I figure out what I want to post about first.","categories": ["blog"],
+        "title": "Blog Beginnings",
+        "excerpt":"A couple months back, halfway into my first semester at Temple, I found myself in doubt. The first Computer Science class I registered for was CIS 1166 - “Mathematical Concepts in Computing I” - a Discrete Math course. Every section of CIS 1001, the intended introductory CS course, was full...","categories": ["jekyll"],
         "tags": [],
-        "url": "http://localhost:4000/blog/welcome-to-jekyll/",
+        "url": "http://localhost:4000/jekyll/welcome-to-jekyll/",
         "teaser":null}]
