@@ -31,7 +31,7 @@ plugins:
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -39,7 +39,7 @@ title                    : "Chris Cornell"
 title_separator          : "-"
 name                     : "Chris Cornell"
 description              : "An amazing website."
-url                      : "https://chris.hachihut.net"
+url                      : "chris.hachihut.net"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "chris-cornell/chris-cornell.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -207,7 +207,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 0 # amount of posts to show
+paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
