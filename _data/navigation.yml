@@ -1,11 +1,7 @@
 # main links
 main:
   - title: "blog"
-<<<<<<< HEAD
     url: "http://chris.hachihut.net/blog/"
-=======
-    url: /blog/
->>>>>>> f8cdf38910ff8802baa9e928c106a794e083c57a
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
