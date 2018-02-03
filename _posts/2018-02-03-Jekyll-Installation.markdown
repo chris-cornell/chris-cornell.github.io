@@ -46,7 +46,12 @@ As if a sign from above, I then stumbled upon [this GitHub blog post](https://gi
 However, yet again, simplicity was not in the plans for GitHub Pages today. I built my site locally (via "bundle exec jekyll serve") and navigated to localhost:4000 in Chrome. Nothing. Blank page.
 In the terminal sat this monstrosity:
 ```
-Dependency Error: Yikes! It looks like you don't have jekyll-remote-theme or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'Could not open library 'libcurl': The specified module could not be found. . Could not open library 'libcurl.dll': The specified module could not be found. . Could not open library 'libcurl.so.4': The specified module could not be found. . Could not open library 'libcurl.so.4.dll': The specified module could not be found. ' If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
+Dependency Error: Yikes! It looks like you don't have jekyll-remote-theme or one of its dependencies installed.
+In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'Could not open library 'libcurl': The specified module could not be found.
+Could not open library 'libcurl.dll': The specified module could not be found.
+Could not open library 'libcurl.so.4': The specified module could not be found.
+Could not open library 'libcurl.so.4.dll': The specified module could not be found.'
+If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
 ```
 Another dependency error, but this time more confusing: Upon running "curl --version", I got a nice clean output informing me that Curl was not only installed, but up to date. Back to Google I went, looking for any way out of this headache. *I should have just used WordPress*, I thought to myself, skimming over the search results looking for anything relevant. I found [this](https://github.com/jekyll/jekyll/issues/6660#issuecomment-354690545) suggestion to use an older version of the github-pages plugin, which only gave me more incompatibility errors. After a while of Googling around, I found [this](https://github.com/benbalter/jekyll-remote-theme/issues/17#issuecomment-354677407) suggestion to move manually extract libcurl.dll from the libcurl installation package, add it to PATH, and copy it to another "libcurl" file, sans .dll extension.
 
@@ -54,7 +59,7 @@ Finally, my page built locally. http://localhost:4000 has never looked so great.
 
 I was greeted with a cold blank page. *Maybe*, I thought, *it's just the theme*. So I went to install minimal-mistakes using their [QuickStart Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/). Again, blank page. I figured that I had now stumbled upon a layout issue, so I cloned the minimal-mistakes repository and moved all the files over. It worked - upon running the local Jekyll server, everything looked great. Now, back to the live site.
 
-Instead of a blank page, I was now greeted with a boring page lacking any CSS whatsoever. I was dumbstruck - how could my page be building perfectly when running it locally, and completely break when moved to GitHub? I went back to Google and found [this](https://github.com/mmistakes/minimal-mistakes/issues/76) GitHub issue. Upon removing the "s" from "https" in my config, I crossed my fingers and pushed the changes.
+Instead of a blank page, I was now greeted with a boring page lacking any CSS whatsoever. I was dumbstruck - how could my page be building perfectly when running it locally, and completely break when moved to GitHub? I went back to Google and found [this](https://github.com/mmistakes/minimal-mistakes/issues/76) GitHub issue. Upon changing "https" to "http" in the 'url' section of my config, I crossed my fingers and pushed the changes.
 
 Like magic, everything was live and functioning perfectly. It was now two days after I had originally started the project, and I finally had my site up and running. A success in my book.
 
