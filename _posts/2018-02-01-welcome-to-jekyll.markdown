@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "First Post Placeholder"
 date:   2018-02-01 12:41:43 -0500
 categories: blog
