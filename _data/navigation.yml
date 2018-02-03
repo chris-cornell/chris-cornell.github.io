@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "blog"
-    url: "http://chris.hachihut.net/blog/"
+  #- title: "blog"
+  #  url: "http://chris.hachihut.net/blog/"
   - title: "about"
     url: "/about/"
   - title: "resume"
