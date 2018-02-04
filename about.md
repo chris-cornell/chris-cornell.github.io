@@ -2,6 +2,7 @@
 layout: single
 title: About
 permalink: /about/
+author_profile: true
 ---
 I'm a 19 year old Computer Science student with a knack for <s>laziness</s> efficiency and automation. Some other interests of mine include video games (especially Counter Strike) and fashion. My focus is on gaining as much knowledge and experience as I can and applying it anywhere possible.
 
