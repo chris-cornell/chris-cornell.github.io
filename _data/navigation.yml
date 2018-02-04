@@ -4,6 +4,8 @@ main:
   #  url: "http://chris.hachihut.net/blog/"
   - title: "about"
     url: "/about/"
+  - title: "projects"
+    url: "/projects/"
   - title: "resume"
     url: "/assets/resume.pdf"
   # - title: "Sample Posts"

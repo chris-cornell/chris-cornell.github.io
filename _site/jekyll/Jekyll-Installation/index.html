@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Blog Beginnings - Chris Cornell</title>
+<!-- begin _includes/seo.html --><title>Jekyll Installation and Google-Fu - Chris Cornell</title>
 <meta name="description" content="A couple months back, halfway into my first semester at Temple, I found myself in doubt. The first Computer Science class I registered for was CIS 1166 - “Mathematical Concepts in Computing I” - a Discrete Math course. Every section of CIS 1001, the intended introductory CS course, was full by my orientation date, and I had tested out of the first programming class, CIS 1068. This landed me in a classroom full of thick-bearded upperclassmen on my first day of college.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Chris Cornell">
-<meta property="og:title" content="Blog Beginnings">
-<meta property="og:url" content="http://localhost:4000/jekyll/welcome-to-jekyll/">
+<meta property="og:title" content="Jekyll Installation and Google-Fu">
+<meta property="og:url" content="http://localhost:4000/jekyll/Jekyll-Installation/">
 
 
   <meta property="og:description" content="A couple months back, halfway into my first semester at Temple, I found myself in doubt. The first Computer Science class I registered for was CIS 1166 - “Mathematical Concepts in Computing I” - a Discrete Math course. Every section of CIS 1001, the intended introductory CS course, was full by my orientation date, and I had tested out of the first programming class, CIS 1068. This landed me in a classroom full of thick-bearded upperclassmen on my first day of college.">
@@ -29,7 +29,7 @@
 
 
 
-  <meta property="article:published_time" content="2018-02-01T12:41:43-05:00">
+  <meta property="article:published_time" content="2018-02-03T18:18:00-05:00">
 
 
 
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/jekyll/welcome-to-jekyll/">
+<link rel="canonical" href="http://localhost:4000/jekyll/Jekyll-Installation/">
 
 
 
@@ -120,6 +120,11 @@
             
             <li class="masthead__menu-item">
               <a href="http://localhost:4000/about/" >about</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/projects/" >projects</a>
             </li>
           
             
@@ -261,15 +266,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Blog Beginnings">
+    <meta itemprop="headline" content="Jekyll Installation and Google-Fu">
     <meta itemprop="description" content="A couple months back, halfway into my first semester at Temple, I found myself in doubt. The first Computer Science class I registered for was CIS 1166 - “Mathematical Concepts in Computing I” - a Discrete Math course. Every section of CIS 1001, the intended introductory CS course, was full by my orientation date, and I had tested out of the first programming class, CIS 1068. This landed me in a classroom full of thick-bearded upperclassmen on my first day of college.">
-    <meta itemprop="datePublished" content="February 01, 2018">
+    <meta itemprop="datePublished" content="February 03, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Blog Beginnings
+          <h1 class="page__title" itemprop="headline">Jekyll Installation and Google-Fu
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -277,7 +282,7 @@
 
 
 
-  3 minute read
+  6 minute read
 </p>
           
         </header>
@@ -291,7 +296,7 @@
 
 <p>I reached out and asked for advice from a family member, a soon-to-be Computer Science graduate, who took the time to give me a detailed response in which he emphasized one key goal: Make a website and use it wisely. He mentioned that to manage his own site, he runs Jekyll on a Linux VM. I thanked him and stored the advice for when I could give this new project the focus and dedication it needed. After all, I had never worked with Ruby or GitHub in the past, so this was going to be a completely new experience for me.</p>
 
-<p>Two mornings ago, I woke up early, grabbed a large coffee and a breakfast sandwich, and sat down in my dorm with caffeine-fueled determination. I was not going to get up until I had a functioning, attractive site up and running on Github Pages. With something such as Jekyll, this should be an easy setup.</p>
+<p>Two mornings ago, I woke up early, grabbed a large coffee and a breakfast sandwich, and sat down in my dorm with caffeine-fueled determination. I was not going to get up until I had a functioning, attractive site up and running on GitHub Pages. With something such as Jekyll, this should be an easy setup.</p>
 
 <p>Or so I thought.</p>
 
@@ -318,9 +323,30 @@ In Gemfile:
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install ffi -f
 ERROR: While executing gem ... (ArgumentError) wrong number of arguments (given 1, expected 0)
 </code></pre></div></div>
-<p>I scratched my head in confusion. The <a href="https://github.com/ffi/ffi/issues/598#issuecomment-354892346">comment that gave this solution</a> had 25 thumbs up emojis <em>and</em> 8 heart emojis - it had to work! This time, my Google-fu lead me nowhere. I decided to move to my laptop, and installed an older version of Ruby, cloned my repo, and went to work.</p>
+<p>I scratched my head in confusion. The <a href="https://github.com/ffi/ffi/issues/598#issuecomment-354892346">comment that gave this solution</a> had 25 thumbs up emojis <em>and</em> 8 heart emojis - it had to work! This time, my Google-fu lead me nowhere. I decided to move the party to my laptop, and installed an older version of Ruby, cloned my repo, and went to work.</p>
 
-<p>As if a sign from above, I then stumbled upon <a href="https://github.com/blog/2464-use-any-theme-with-github-pages">this GitHub blog post</a>, announcing support for any GitHub hosted Jekyll theme.</p>
+<p>As if a sign from above, I then stumbled upon <a href="https://github.com/blog/2464-use-any-theme-with-github-pages">this GitHub blog post</a>, announcing support for any GitHub hosted Jekyll theme. The steps were supposedly simple, even moreso than before - just add “/$theme_creator/$theme_name” to the config.yml file and rebuild your site, and voila!</p>
+
+<p>However, yet again, simplicity was not in the plans for GitHub Pages today. I built my site locally (via “bundle exec jekyll serve”) and navigated to localhost:4000 in Chrome. Nothing. Blank page.
+In the terminal sat this monstrosity:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dependency Error: Yikes! It looks like you don't have jekyll-remote-theme or one of its dependencies installed.
+In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'Could not open library 'libcurl': The specified module could not be found.
+Could not open library 'libcurl.dll': The specified module could not be found.
+Could not open library 'libcurl.so.4': The specified module could not be found.
+Could not open library 'libcurl.so.4.dll': The specified module could not be found.'
+If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
+</code></pre></div></div>
+<p>Another dependency error, but this time more confusing: Upon running “curl –version”, I got a nice clean output informing me that Curl was not only installed, but up to date. Back to Google I went, looking for any way out of this headache. <em>I should have just used WordPress</em>, I thought to myself, skimming over the search results looking for anything relevant. I found <a href="https://github.com/jekyll/jekyll/issues/6660#issuecomment-354690545">this</a> suggestion to use an older version of the github-pages plugin, which only gave me more incompatibility errors. After a while of Googling around, I found <a href="https://github.com/benbalter/jekyll-remote-theme/issues/17#issuecomment-354677407">this</a> suggestion to move manually extract libcurl.dll from the libcurl installation package, add it to PATH, and copy it to another “libcurl” file, sans .dll extension.</p>
+
+<p>Finally, my page built locally. http://localhost:4000 has never looked so great. I pushed the changes to the master branch, and went to visit my live website.</p>
+
+<p>I was greeted with a cold blank page. <em>Maybe</em>, I thought, <em>it’s just the theme</em>. So I went to install minimal-mistakes using their <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">QuickStart Guide</a>. Again, blank page. I figured that I had now stumbled upon a layout issue, so I cloned the minimal-mistakes repository and moved all the files over. It worked - upon running the local Jekyll server, everything looked great. Now, back to the live site.</p>
+
+<p>Instead of a blank page, I was now greeted with a boring page lacking any CSS whatsoever. I was dumbstruck - how could my page be building perfectly when running it locally, and completely break when moved to GitHub? I went back to Google and found <a href="https://github.com/mmistakes/minimal-mistakes/issues/76">this</a> GitHub issue. Upon changing “https” to “http” in the ‘url’ section of my config, I crossed my fingers and pushed the changes.</p>
+
+<p>Like magic, everything was live and functioning perfectly. It was now two days after I had originally started the project, and I finally had my site up and running. A success in my book.</p>
+
+<p>Thanks for reading.</p>
 
 
         
@@ -351,7 +377,7 @@ ERROR: While executing gem ... (ArgumentError) wrong number of arguments (given 
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-01T12:41:43-05:00">February 01, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-03T18:18:00-05:00">February 03, 2018</time></p>
         
       </footer>
 
@@ -360,13 +386,13 @@ ERROR: While executing gem ... (ArgumentError) wrong number of arguments (given 
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Blog+Beginnings%20http%3A%2F%2Flocalhost%3A4000%2Fjekyll%2Fwelcome-to-jekyll%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Jekyll+Installation+and+Google-Fu%20http%3A%2F%2Flocalhost%3A4000%2Fjekyll%2FJekyll-Installation%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjekyll%2Fwelcome-to-jekyll%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjekyll%2FJekyll-Installation%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fjekyll%2Fwelcome-to-jekyll%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fjekyll%2FJekyll-Installation%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjekyll%2Fwelcome-to-jekyll%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjekyll%2FJekyll-Installation%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
@@ -391,7 +417,7 @@ ERROR: While executing gem ... (ArgumentError) wrong number of arguments (given 
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/jekyll/welcome-to-jekyll/" rel="permalink">Blog Beginnings
+        <a href="http://localhost:4000/jekyll/Jekyll-Installation/" rel="permalink">Jekyll Installation and Google-Fu
 </a>
       
     </h2>
@@ -401,7 +427,7 @@ ERROR: While executing gem ... (ArgumentError) wrong number of arguments (given 
 
 
 
-  3 minute read
+  6 minute read
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">A couple months back, halfway into my first semester at Temple, I found myself in doubt. The first Computer Science class I registered for was CIS 1166 - “Ma...</p>
