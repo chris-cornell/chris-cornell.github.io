@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to end of file
 {
 
-	/////====================STATE LOGIC: OUT===================/////
+	/* STATE LOGIC: OUT */
 
 	if (state == OUT && cur=='/') //if the state is outside of a comment and encounters a slash, this *might* be the beginning of a comment
 	{
@@ -40,7 +40,7 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 		putchar(cur);
 	}
 
-	/////====================STATE LOGIC: POSS_INSIDE===================/////
+	/* STATE LOGIC: POSS_INSIDE */
 
 	else if(state == POSS_INSIDE && cur == '*') //if the program has detected a potential beginning of a comment (a slash) and the following character is a '*'...
 	{
@@ -61,7 +61,7 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 		state = OUT; //set the state to OUT
 	}
 
-	/////====================STATE LOGIC: INSIDE_COMMENT===================/////
+	/* STATE LOGIC: INSIDE_COMMENT */
 
 	else if(state == INSIDE_COMMENT && cur == '*'){ //if the state is INSIDE_COMMENT and it encounters a '*'
 		state = MAYBE_OUT; //then it is potentially the ending of a comment
@@ -72,7 +72,7 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 		// do nothing (this is where the comments are filtered out)
 	}
 
-	/////====================STATE LOGIC: MAYBE_OUT===================/////
+	/* STATE LOGIC: MAYBE_OUT */
 
 	else if(state == MAYBE_OUT && cur=='/') //if the processor comes upon a * (setting to MAYBE_OUT) then a /
 	{
@@ -82,7 +82,7 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 	{
 		state = INSIDE_COMMENT; //then it was just a * and not the end of the comment and so the program returns to that state.
 	}
-	/////====================STATE LOGIC: IN_QUOTE===================/////
+	/* STATE LOGIC: IN_QUOTE */
 	else if(state == IN_QUOTE && cur=='\"' || cur == '\'')
 	{
 		putchar(cur); //if inside a quote and encounters a " or '...
@@ -93,7 +93,7 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 		putchar(cur);
 	}
 
-	/////====================LINE COUNTER===================/////
+	/* LINE COUNTER */
 
 	if(cur == '\n')
 	{
