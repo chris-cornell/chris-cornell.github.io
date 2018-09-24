@@ -1,4 +1,4 @@
-/* rmcmt.c Mark Dolan, CIS 2107, Comment Remover 091614 */
+/* Chris Cornell rmcmt.c for CIS2107 */
 
 #include <stdio.h>
 /*
@@ -40,7 +40,7 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 		putchar(cur);
 	}
 
-	/* STATE LOGIC: POSS_INSIDE */
+	/* STATE LOGIC: POSS_INSIDE*/
 
 	else if(state == POSS_INSIDE && cur == '*') //if the program has detected a potential beginning of a comment (a slash) and the following character is a '*'...
 	{
@@ -51,7 +51,7 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 	{
 		putchar(temp); //write the last character
 		putchar(cur); //as well as the current character
-		state = IN_QUOTE; //and set the state to inside quote.
+		state = INSIDE_QUOTE; //and set the state to inside quote.
 		lineError = lines; //record line number in case of error
 	}
 	else if(state == POSS_INSIDE) //if there is a possible comment beginning but it ends up not being a comment (the if/else clauses above would have determined that already)
@@ -64,7 +64,7 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 	/* STATE LOGIC: INSIDE_COMMENT */
 
 	else if(state == INSIDE_COMMENT && cur == '*'){ //if the state is INSIDE_COMMENT and it encounters a '*'
-		state = MAYBE_OUT; //then it is potentially the ending of a comment
+		state = POSS_OUTSIDE; //then it is potentially the ending of a comment
 		lineError = lines; //record the line error
 	}
 	else if(state == INSIDE_COMMENT)
@@ -72,23 +72,23 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 		// do nothing (this is where the comments are filtered out)
 	}
 
-	/* STATE LOGIC: MAYBE_OUT */
+	/* STATE LOGIC: POSS_OUTSIDE*/
 
-	else if(state == MAYBE_OUT && cur=='/') //if the processor comes upon a * (setting to MAYBE_OUT) then a /
+	else if(state == POSS_OUTSIDE && cur=='/') //if the processor comes upon a * (setting to POSS_OUTSIDE) then a /
 	{
 		state = OUT; //then that is the end of the comment
 	}
-	else if(state == MAYBE_OUT) //if the processor comes upon a * (settings it to MAYBE_OUT) but the above statement is not executed...
+	else if(state == POSS_OUTSIDE) //if the processor comes upon a * (settings it to POSS_OUTSIDE) but the above statement is not executed...
 	{
 		state = INSIDE_COMMENT; //then it was just a * and not the end of the comment and so the program returns to that state.
 	}
 	/* STATE LOGIC: IN_QUOTE */
-	else if(state == IN_QUOTE && cur=='\"' || cur == '\'')
+	else if(state == INSIDE_QUOTE && cur=='\"' || cur == '\'')
 	{
 		putchar(cur); //if inside a quote and encounters a " or '...
 		state = OUT; //then set the state to OUT
 	}
-	else if(state == IN_QUOTE) //
+	else if(state == INSIDE_QUOTE) //
 	{
 		putchar(cur);
 	}
@@ -100,24 +100,27 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 		lines++; // when new line begins, increment line count
 	}
 }
-//end of white loop
+//end of while loop
 
-/*
-If state is INSIDE_COMMENT at the end of the file, the comment was not properly closed.
+
+/* If state is INSIDE_COMMENT at the end of the file, the comment was not properly closed.
 If state is INSIDE_QUOTE at the end of the file, the quotations were not properly closed.
-Otherwise, the program decommented successfully according to how it should have.
-*/
-if(state == IN)
+Otherwise, the program decommented successfully according to how it should have. */
+
+if(state == INSIDE_COMMENT)
 {
-	printf("A comment was not properly closed on line %d\n", lineError);
+	printf("Comment left open at line %d\n", lineError);
 	return 1; //error
 }
-else if(state == IN_QUOTE)
+else if(state == INSIDE_QUOTE)
 {
-	printf("No terminating quotation mark found on line %d\n", lineError);
+	printf("No ending quote at line %d\n", lineError);
 	return 1; //error
-}else{
-	printf("program decommented successfully\n");
+}
+else
+{
+	printf("Successful decommenting\n");
 	return 0; //no error
 }
-}//End Main
+}
+// endof main
