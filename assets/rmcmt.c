@@ -1,4 +1,4 @@
-/* Chris Cornell rmcmt.c for CIS2107 */
+/* rmcmt.c Mark Dolan, CIS 2107, Comment Remover 091614 */
 
 #include <stdio.h>
 /*
@@ -100,7 +100,7 @@ while ((cur=getchar())!=EOF) // beginning of main loop from beginning of file to
 		lines++; // when new line begins, increment line count
 	}
 }
-//end of while loop
+//end of white loop
 
 /*
 If state is INSIDE_COMMENT at the end of the file, the comment was not properly closed.
@@ -116,11 +116,8 @@ else if(state == IN_QUOTE)
 {
 	printf("No terminating quotation mark found on line %d\n", lineError);
 	return 1; //error
-}
-else
-{
+}else{
 	printf("program decommented successfully\n");
 	return 0; //no error
 }
-}
-// endof main
+}//End Main
