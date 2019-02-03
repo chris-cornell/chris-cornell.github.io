@@ -112,7 +112,7 @@ analytics:
 author:
   name             : "Chris Cornell"
   avatar           : "/assets/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "An aspiring software developer"
+  bio              : "Software Developer"
   location         : "Philadelphia, PA"
   email            : "chriscornell@temple.edu"
   uri              :
