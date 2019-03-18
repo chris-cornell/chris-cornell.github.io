@@ -5,6 +5,6 @@ permalink: /projects/
 ---
 https://github.com/chris-cornell
 
-Soon to be populated with more projects!
+Currently fully focused on writing code for Habitat. Big project plans for the future!
 
-![Road Work Ahead!]({{ "/assets/roadwork.png" | absolute_url }})
+Next project: Complete site/portfolio rewrite with React.
