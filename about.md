@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 author_profile: true
 ---
-I'm a 19 year old Computer Science student with a knack for <s>laziness</s> efficiency and automation. Some other interests of mine include video games (especially Counter Strike) and fashion. My focus is on gaining as much knowledge and experience as I can and applying it anywhere possible.
+20 year old Information Science & Technology student, currently part-time Full Stack JS intern. Some other interests of mine include video games (specifically Counter Strike), reading, writing, fashion, music and art. Striving to learn as much as I can and apply my knowledge in the best way possible.
 
 I am currently enrolled in the Temple University Honors program with an expected graduation of May 2021. 
 
